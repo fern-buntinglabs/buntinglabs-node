@@ -1,6 +1,6 @@
 # Bunting Labs Node Library
 
-[![npm shield](https://img.shields.io/npm/v/@fern-api/{company})](https://www.npmjs.com/package/@fern-api/buntinglabs)
+[![npm shield](https://img.shields.io/npm/v/@fern-api/buntinglabs)](https://www.npmjs.com/package/@fern-api/buntinglabs)
 
 The {Company} Node.js library provides access to the Bunting Labs API from JavaScript/TypeScript.
 
@@ -13,9 +13,19 @@ API reference documentation is available [here](https://docs.buntinglabs.com/int
 [![Try it out](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/typescript-example-using-sdk-built-with-fern-yjuxa6?file=app.ts&view=editor)
 
 ```typescript
-import { TODO } from "TODO";
+import { BuntinglabsApiClient } from '@fern-api/buntinglabs';
 
-const TODO
+const client = new BuntinglabsApiClient({
+  token: 'MY_TOKEN',
+});
+
+const response = await client.census.population({
+  center: '-118.328228,33.342819',
+  radius: 1000.0,
+  apiKey: 'demo',
+});
+
+console.log('Received response from Bunting Labs!', response);
 ```
 
 ## Beta status

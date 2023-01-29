@@ -2,7 +2,7 @@
 
 [![npm shield](https://img.shields.io/npm/v/@fern-api/buntinglabs)](https://www.npmjs.com/package/@fern-api/buntinglabs)
 
-The {Company} Node.js library provides access to the Bunting Labs API from JavaScript/TypeScript.
+The Bunting Labs Node.js library provides access to the Bunting Labs API from JavaScript/TypeScript.
 
 ## Documentation
 

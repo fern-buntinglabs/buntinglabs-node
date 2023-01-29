@@ -22,9 +22,7 @@ export class Client {
     /**
      * Calculate the number of people living in a radius around a point, according to US Census data.
      */
-    public async population(
-        request: BuntinglabsApi.ExtractFeaturesRequest
-    ): Promise<BuntinglabsApi.PopulationResponse> {
+    public async population(request: BuntinglabsApi.PopulationRequest): Promise<BuntinglabsApi.PopulationResponse> {
         const _queryParams = new URLSearchParams();
         if (request.center != null) {
             _queryParams.append("center", request.center);
@@ -39,7 +37,7 @@ export class Client {
         const _response = await core.fetcher({
             url: urlJoin(
                 this.options.environment ?? environments.BuntinglabsApiEnvironment.Production,
-                "/census/extract"
+                "/census/population"
             ),
             method: "POST",
             headers: {

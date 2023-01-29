@@ -1,2 +1,2 @@
-export { ExtractFeaturesRequest } from "./ExtractFeaturesRequest";
+export { PopulationRequest } from "./PopulationRequest";
 export { IncomeRequest } from "./IncomeRequest";
